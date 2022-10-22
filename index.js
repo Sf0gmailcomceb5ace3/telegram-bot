@@ -16,12 +16,12 @@ async function run_TelegramBot(){
 
       bot.onText(/\/urladmin (.+)/, (msg, match) => {
         const chatId = msg.chat.id;
-        const film_msg = '<tt>📽️  Film Downloader - Sisula Welgamage 📽️</tt><br><br>' +
-        '<b>• TITLE</b> <tt>: ' + match[1].split('@')[1] + '</tt><br><br>' +
-        '<b>• URL</b>  <tt>: https://sisula.ml</tt>'
+        const film_msg = '📽️  Film Downloader - Sisula Welgamage 📽️\n\n\n' +
+        '• TITLE : ' + match[1].split('@')[1] + '\n\n' +
+        '• URL : https://sisula.ml'
         if (match[1] === '' || match[1] === ' ' || match[1]  === undefined || match === "undefined") return bot.sendMessage(chatId, '<tt> Enter Link Please </tt>');
-        bot.sendMessage(chatId, '<tt> Downloading Your video </tt>');
-        bot.sendMessage(chatId, '<tt> Uploading Your video </tt>');
+        bot.sendMessage(chatId, '📽️ Downloading Your video...');
+        bot.sendMessage(chatId, '📽️ Uploading Your video...');
         bot.sendVideo(msg.chat.id,match[1].split('@')[0] );
         
     });
