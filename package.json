@@ -1,0 +1,23 @@
+{
+  "name": "node-tel-bot",
+  "version": "1.0.0",
+  "description": "nodejs telegrame bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "supervisor -s index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sisula"
+  },
+  "keywords": [
+    "bot",
+    "tel"
+  ],
+  "author": "sisula",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.59.0",
+    "supervisor": "^0.12.0"
+  }
+}
